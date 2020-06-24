@@ -16,4 +16,6 @@ class App extends Component{
           <Route path="/:id" exact component={FullPost} />
         </Switch>
       </Layout>
+  )
+}    
 export default App;
