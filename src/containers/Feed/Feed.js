@@ -3,6 +3,7 @@ import Card from '../../components/UI/Card/Card'
 import classes from './Feed.module.css'
 import axios from '../../axios/axios'
 import LoadSpinner from '../../components/UI/LoadSpinner/LoadSpinner'
+import NewPost from '../../components/NewPost/NewPost'
 class feed extends Component{
     state = {
         posts: null
@@ -33,6 +34,7 @@ class feed extends Component{
         return(
             <div>
                 <section className={classes.Feed}>
+                    <NewPost />
                     {posts}
                 </section>
             </div>
