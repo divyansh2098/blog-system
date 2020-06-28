@@ -8,7 +8,7 @@
     background-color: #258ea6;
   }
 
-.form-wrapper {
+.formwrapper {
     width: 400px;
     display: flex;
     flex-direction: column;

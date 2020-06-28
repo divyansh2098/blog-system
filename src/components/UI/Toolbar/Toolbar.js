@@ -10,7 +10,7 @@ const toolbar = (props) => {
             <Logo />
             <h2><i>Views</i></h2>
             <ul>
-                <li><NavLink to="/">Login</NavLink></li>
+                <li><NavLink to="/login">Login</NavLink></li>
                 <li><NavLink to="/sign-up" >SignUp</NavLink></li>
             </ul>
         </div>
