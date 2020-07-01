@@ -4,19 +4,44 @@ class Card extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            count: 0
+            count: 0,
+            upvoted: false,
+            downvoted: false
         };
     }
     upvote() {
-        this.setState({
-            count: this.state.count + 1
-        });
+        if (this.state.upvoted === false && this.state.downvoted === false) {
+            this.setState({
+                count: this.state.count + 1,
+                upvoted: !this.state.upvoted,
+            })
+        }
+        if (this.state.upvoted === true) {
+            this.setState({
+                count: this.state.count - 1,
+                upvoted: !this.state.upvoted,
+            })
+        }
+        console.log(this.state)
+
     };
 
     downvote() {
-        this.setState({
-            count: this.state.count - 1
-        });
+        if (this.state.downvoted === false && this.state.upvoted === false) {
+            this.setState({
+                count: this.state.count - 1,
+                downvoted: !this.state.downvoted,
+
+            });
+        }
+        if (this.state.downvoted === true) {
+            this.setState({
+                count: this.state.count + 1,
+                downvoted: !this.state.downvoted
+            })
+        }
+        console.log(this.state)
+
     };
     render() {
         return (
